@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    /* Font Arial */
+}
+
+.background {
+    background-image: url('background.jpg');
+    /* Gambar latar belakang */
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 5px;
+    /* Border radius 5px */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    /* Lebar keseluruhan kotak */
+    text-align: center;
+    /* Semua elemen di dalam login-box berada di tengah */
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 20px;
+}
+
+.input-box {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.input-box input {
+    width: 250px;
+    /* Lebar input 250px */
+    padding: 10px;
+    font-size: 16px;
+    /* Ukuran font input */
+    border: 3px solid #ddd;
+    /* Border dengan ketebalan 3px */
+    border-radius: 5px;
+    /* Border radius untuk input */
+    outline: none;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    /* Transisi */
+}
+
+/* Saat kursor diarahkan ke input */
+.input-box input:hover {
+    border-color: #022c9f;
+}
+
+.input-box input:focus {
+    border-color: #022c9f;
+    /* Border berubah warna saat hover atau fokus */
+    background-color: #ffd600;
+    /* Background input berubah saat hover atau fokus */
+}
+
+.input-box label {
+    position: absolute;
+    left: 10px;
+    /* Geser label sedikit ke kanan */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #333;
+    font-size: 16px;
+    /* Ukuran font label */
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: -5px;
+    font-size: 12px;
+    color: #999;
+}
+
+/* Tombol Login */
+.login-btn {
+    width: 150px;
+    /* Lebar tombol ditetapkan menjadi 150px */
+    padding: 12px;
+    /* Ukuran padding untuk tombol */
+    background-color: #ffd600;
+    /* Warna tombol kuning */
+    border: none;
+    color: white;
+    font-size: 16px;
+    /* Ukuran font tombol */
+    cursor: pointer;
+    border-radius: 5px;
+    /* Border radius tombol 5px */
+    transition: background-color 0.3s ease;
+    margin: 0 auto;
+    /* Memusatkan tombol */
+}
+
+/* Saat kursor berada di atas tombol login */
+.login-btn:hover {
+    background-color: #022c9f;
+    /* Background tombol berubah saat hover */
+}
